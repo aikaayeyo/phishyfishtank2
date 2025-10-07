@@ -1,18 +1,13 @@
 def monitor():
   try:
-    
-    val1 = 0
-    val2 = 0
-
-    alkilines = list(range(val1, val2+1))
-
+    # desired acceptable alkalinity range: 4 to 8 (inclusive)
     current = get_alkalinity()
-    mesg = "Alkalinity OK"
+    mesg = "alkalinity ok"
 
-    if (current < alkilines[0]):
-      mesg = "Alkalinity too low!"
-    elif (current > alkilines[5]):
-      mesg = "Alkalinity too high!"
+    if current < 4:
+      mesg = "alkalinity too low"
+    elif current > 8:
+      mesg = "alkalinity too high"
     
   except:
     print("Unexpected error") 
