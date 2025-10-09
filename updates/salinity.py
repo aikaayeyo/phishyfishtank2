@@ -1,18 +1,13 @@
 def monitor():
   try:
-    
-    val1 = 0
-    val2 = 0
-
-    sal_levels = list(range(val1, val2))
-
     current = get_salinity()
-    mesg = "Salinity OK"
+    mesg = "salinity ok"
 
-    if (current < sal_levels[0]):
-      mesg = "Salinity too low!"
-    elif (current > sal_levels[7]):
-      mesg = "Salinity too high!"
+    # Desired safe salinity range: 30 to 35 (inclusive)
+    if current < 30:
+      mesg = "salinity too low"
+    elif current > 35:
+      mesg = "salinity too high"
     
   except:
     print("Unexpected error")
