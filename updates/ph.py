@@ -13,9 +13,11 @@ def monitor():
     
   except:
     print("Unexpected error")
-  
+    
   return mesg
 
 # Functiion to simulate actual fish tank monitoring
 def get_ph_level():
   return 8.2
+
+monitor()
