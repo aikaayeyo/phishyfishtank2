@@ -13,7 +13,7 @@ def monitor():
     
   except:
     print("Unexpected error")
-    
+  
   return mesg
 
 # Functiion to simulate actual fish tank monitoring

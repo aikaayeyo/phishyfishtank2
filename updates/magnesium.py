@@ -8,11 +8,13 @@ def monitor():
     mesg = "Magnesium level OK"
 
     if (current < maglvl_low):
-      print("Magnesium level too low!")
+      mesg = "Magnesium level too low!"
     elif (current > maglvl_high):
-      print("Magnesium level too high!")
+      mesg = "Magnesium level too high!"
     else:
-      print("Magnesium level is normal.")
+      mesg = "Magnesium level is normal."
+
+      return mesg
       
 # Function to simulate actual fish tank monitoring
 def get_magnesium_level():

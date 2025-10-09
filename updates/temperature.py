@@ -6,11 +6,13 @@ def monitor():
   current = get_temps()
   
   if (current > temps_high):
-      print("Temperature is too high!")
+      mesg = "Temperature is too high!"
   elif (current < temps_low):
-      print("Temperature is too low!")
+      mesg = "Temperature is too low!"
   else:
-      print("Temperature is at a normal rate.")
+      mesg = "Temperature is at a normal rate."
+
+  return mesg
   
 def get_temps():
   return 76
