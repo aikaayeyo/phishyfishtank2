@@ -1,12 +1,12 @@
 def monitor():
+  """Return a short status message for phosphate level.
 
-  ph_level = 0
+  This mirrors other modules in `updates/` which return strings so the
+  central `fishtank.monitor()` can concatenate results without side-effects.
+  """
+
 
   current = get_posphate()
-  mesg = "Posphates OK"
-  
-  if (current > ph_level):
-      mesg = "Posphates too high!"
 
   return mesg
 
